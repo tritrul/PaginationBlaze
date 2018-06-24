@@ -123,3 +123,7 @@ var getIntArray = function(min, max){
     }
     return result;
 };
+
+Template.defaultBootstrapPaginator.onDestroyed(function functionName() {
+  this.data.pagination.subscription.stop()
+})
